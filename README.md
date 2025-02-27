@@ -1,3 +1,20 @@
+# LeadPoet | Bittensor-Powered Lead Gen Revolution
+
+## Value Proposition
+
+LeadPoet delivers **free, high-quality leads** through Bittensor’s decentralized network, revolutionizing lead generation for agencies and companies. Traditional lead gen struggles with rising costs, inconsistent third-party providers, and strict privacy laws like CCPA and GDPR, slowing growth and reliability.
+
+By harnessing Bittensor’s incentive-driven ecosystem, LeadPoet offers real-time, tailored lead lists from a global contributor base—slashing costs and ensuring compliance through transparent governance. Agencies gain cost-effective, compliant solutions for clients, while companies in SaaS, e-commerce, and beyond access accurate, affordable leads to fuel growth.
+
+- **Market**: The $8.5B lead generation software market (5.4% CAGR) is ripe for disruption.
+- **Traction**: We’re testing demand on X, Discord, and events like Endgame, pitching accelerators and Bittensor contributors. A landing page with early access perks (e.g., free leads) tracks sign-ups.
+- **Team**: Founders Gavin (Nasdaq Equity PM) and Pranav (Nasdaq Options Specialist) bring deep expertise in high-stakes products for millions.
+- **Next Steps**: Seeking accelerators for mentorship, a pilot with 3-5 portfolio companies to test free leads, and advisory support for strategy and compliance.
+
+**Contact**: [leadpoet@gmail.com](mailto:leadpoet@gmail.com) | [leadpoet.com](http://leadpoet.com)
+
+---
+
 # LeadPoet Subnet - Decentralized Lead Generation on Bittensor
 
 Welcome to **LeadPoet**, a Bittensor subnet designed to create a decentralized, privacy-compliant lead generation network. Contributors submit lead lists, validators ensure quality, and buyers access tailored leads via API or UI—all powered by the TAO token ecosystem.
@@ -69,7 +86,7 @@ LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-cha
 - Filter by industry/region, pay with USD or TAO.
 3. Via API:
 
-  `curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization: Bearer <TAO_wallet_key>"`
+     `curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization: Bearer <TAO_wallet_key>"`
 
 - Output: Decrypted JSON list (e.g., `[{"email": "user@example.com", "industry": "SaaS"}]`) .
 4. Export to CRM (e.g., Salesforce) with `export_to_salesforce.py`.
