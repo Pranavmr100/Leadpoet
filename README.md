@@ -1,4 +1,4 @@
-# LeadPoet | Bittensor-Powered Lead Gen Revolution
+# LeadPoet | Bittensor-Powered Lead Gen 
 
 ## Value Proposition
 
