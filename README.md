@@ -20,17 +20,17 @@ LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-cha
 ### Installation
 1. Install Bittensor:
 
-   pip install bittensor
+   `pip install bittensor`
 
 2. Set up IPFS:
 
-   ipfs init
-   ipfs daemon
+   `ipfs init`
+   `ipfs daemon`
 
 3. Clone this repo:
 
-   git clone https://github.com/[your-repo]/leadpoet-subnet.git
-   cd leadpoet-subnet
+   `git clone https://github.com/[your-repo]/leadpoet-subnet.git
+   cd leadpoet-subnet`
 
 
 ## For Contributors
@@ -39,20 +39,20 @@ LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-cha
 1. Register with a TAO wallet and stake at least 8 TAO.
 2. Prepare your lead list in JSON format:
 
- {
+ `{
      "leads": [
        {"email": "user@example.com", "industry": "SaaS"}
      ],
      "metadata": {"region": "US"}
- }
+ }`
 
 3. Encrypt and submit via API:
 
-     curl -X POST -d @leads.json http://subnet-api/submit_leads
+   `curl -X POST -d @leads.json http://subnet-api/submit_leads`
 
 4. Check status:
 
-   curl http://subnet-api/validation_status?submission_id=<your_submission_id>
+   `curl http://subnet-api/validation_status?submission_id=<your_submission_id>`
 
 
 ### Incentives
@@ -69,7 +69,7 @@ LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-cha
 - Filter by industry/region, pay with USD or TAO.
 3. Via API:
 
-  curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization: Bearer <TAO_wallet_key>"
+  `curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization: Bearer <TAO_wallet_key>"`
 
 - Output: Decrypted JSON list (e.g., `[{"email": "user@example.com", "industry": "SaaS"}]`) .
 4. Export to CRM (e.g., Salesforce) with `export_to_salesforce.py`.
