@@ -11,7 +11,7 @@ By harnessing Bittensor’s incentive-driven ecosystem, LeadPoet offers real-tim
 - **Team**: Founders Gavin (Nasdaq Equity PM) and Pranav (Nasdaq Options Specialist) bring deep expertise in high-stakes products for millions.
 - **Next Steps**: Seeking accelerators for mentorship, a pilot with 3-5 portfolio companies to test free leads, and advisory support for strategy and compliance.
 
-**Contact**: [leadpoet@gmail.com](mailto:leadpoet@gmail.com) | [leadpoet.com](http://leadpoet.com)
+**Contact**: [hello@leadpoet.com](mailto:hello@leadpoet.com) | [hello@leadpoet.com](http://leadpoet.com)
 
 ---
 
