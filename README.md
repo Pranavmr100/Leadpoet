@@ -39,12 +39,12 @@ LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-cha
 1. Register with a TAO wallet and stake at least 8 TAO.
 2. Prepare your lead list in JSON format:
 
- `{
-     "leads": [
-       {"email": "user@example.com", "industry": "SaaS"}
-     ],
-     "metadata": {"region": "US"}
- }`
+    `{
+        "leads": [
+          {"email": "user@example.com", "industry": "SaaS"}
+        ],
+        "metadata": {"region": "US"}
+    }`
 
 3. Encrypt and submit via API:
 
