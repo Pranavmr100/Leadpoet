@@ -1,4 +1,5 @@
 # neurons/web_lead_scraper.py
+# Open source model for miners to use
 
 import requests
 from bs4 import BeautifulSoup
@@ -37,9 +38,10 @@ def scrape_leads(domains, industry="SaaS", target_leads=100):
 if __name__ == "__main__":
     # Sample company domains
     saas_domains = [
-        "example.com",
-        "sample.com"
-        # Add more domains here from a free directory or list
+        "hubspot.com",
+        "slack.com",
+     
+        #....
     ]
     leads = scrape_leads(saas_domains)
     with open("leads.json", "w") as f:
