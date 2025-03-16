@@ -112,10 +112,14 @@ curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization:
 4. Output: Decrypted JSON list, e.g.:
 ```json
 [
-    {"email": "user@example.com", "industry": "SaaS"}
+      {
+            "name": "John Doe",
+            "email": "john.doe@company.com",
+            "company": "Company Inc.",
+            "domain": "company.com"
+        }
 ]
 ```
-5. Export to CRM (e.g., Salesforce) with `export_to_salesforce.py`.
 
 ---
 
