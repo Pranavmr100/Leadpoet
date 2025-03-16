@@ -67,7 +67,12 @@ cd leadpoet-subnet
 ```json
 {
     "leads": [
-        {"email": "user@example.com", "industry": "SaaS"}
+        {
+            "name": "John Doe",
+            "email": "john.doe@company.com",
+            "company": "Company Inc.",
+            "domain": "company.com"
+        }
     ],
     "metadata": {"region": "US"}
 }
