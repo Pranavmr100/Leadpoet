@@ -101,15 +101,14 @@ Earn TAO based on validated leads and quality score (**80-100**).
 ## For Buyers
 
 ### Accessing Leads
-1. Get a TAO wallet and tokens.
-2. **Via UI:**
+1. **Via UI:**
    - Visit [leadpoet.com](https://leadpoet.com).
    - Filter by industry/region, pay with USD (TAO/crypto to be added soon).
-3. **Via API:**
+2. **Via API:**
 ```bash
 curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization: Bearer <TAO_wallet_key>"
 ```
-4. Output: Decrypted JSON list, e.g.:
+3. Output: Decrypted JSON list (recieve a list of leads specific to your industry &/or locaiton), e.g.:
 ```json
 [
       {
