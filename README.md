@@ -104,7 +104,7 @@ Earn TAO based on validated leads and quality score (**80-100**).
 1. Get a TAO wallet and tokens.
 2. **Via UI:**
    - Visit [leadpoet.com](https://leadpoet.com).
-   - Filter by industry/region, pay with USD or TAO.
+   - Filter by industry/region, pay with USD (TAO/crypto to be added soon).
 3. **Via API:**
 ```bash
 curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization: Bearer <TAO_wallet_key>"
@@ -116,9 +116,6 @@ curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization:
 ]
 ```
 5. Export to CRM (e.g., Salesforce) with `export_to_salesforce.py`.
-
-### Pricing Example
-**100 SaaS leads = 2 TAO.**
 
 ---
 
