@@ -1,8 +1,6 @@
 # config.py
 
-# API settings (where our server runs)
-API_HOST = "0.0.0.0"  # Means "accessible from anywhere"
-API_PORT = 8000       # The port number (like a door for connections)
-
-# Encryption key (replace this with a secure key later)
-ENCRYPTION_KEY = b"mysecretkey1234567890abcdefghij"  # Must be 32 bytes
+# neurons/config.py
+API_HOST = '0.0.0.0'
+API_PORT = 5002
+ENCRYPTION_KEY = b'Gv9kR5pKzX8uY2vN3mL9qW5tJ7hF4dC8eB6xA0yS2iE='  # Example key

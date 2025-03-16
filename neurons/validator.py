@@ -1,24 +1,58 @@
-# neurons/validator.py
-
-from utils.crypto import decrypt_data
+# validator_checks/validator.py
+import bittensor as bt
 import json
+from utils.crypto import decrypt_data, encrypt_data  # Assuming these exist
+from validator_checks.automated_check import validate_lead_list as automated_validate
+from validator_checks.os_validator_model import validate_lead_list as deep_validate
 
-def validate_submission(encrypted_data):
-    """Check a submitted lead list."""
-    # Decrypt the data
-    decrypted_text = decrypt_data(encrypted_data)
-    submission = json.loads(decrypted_text)
-    
-    # Simple quality check (placeholder)
-    leads = submission["leads"]
-    score = 80  # Fake score for now
-    if all("email" in lead for lead in leads):  # Check if all have emails
-        score = 90
-    return score
+class LeadPoetValidator(bt.Synapse):
+    def __init__(self):
+        super().__init__()
+        self.wallet = bt.wallet()
+        self.axon = bt.axon(wallet=self.wallet, port=8092)
+        self.axon.attach(self.validate_leads)
+        self.axon.start()
 
-# Example usage (you’d get encrypted_data from the API in real life)
+    async def validate_leads(self, request_data):
+        encrypted_leads = request_data.get("leads", "")
+        industry = request_data.get("industry", "N/A")
+
+        print(f"Validator received encrypted leads for industry: {industry}")
+
+        # Step 1: Decrypt the leads
+        try:
+            decrypted_text = decrypt_data(encrypted_leads)
+            leads_data = json.loads(decrypted_text)
+            leads = leads_data.get("leads", [])
+        except Exception as e:
+            return {"status": "error", "message": f"Decryption failed: {str(e)}"}
+
+        # Step 2: Save temporarily for validation scripts
+        with open("temp_leads.json", "w") as f:
+            json.dump({"leads": leads}, f, indent=4)
+
+        # Step 3: Run automated validation
+        automated_report = automated_validate("temp_leads.json")
+        valid_leads = [lead for lead in leads if any(r["status"] == "Valid" for r in automated_report if r["lead_index"] == lead["lead_index"])]
+
+        if not valid_leads:
+            return {"status": "error", "message": "Automated validation failed"}
+
+        # Step 4: Run deep validation
+        deep_report = deep_validate("temp_leads.json", industry)
+        validated_leads = [lead for lead in valid_leads if any(r["status"] == "High Quality" for r in deep_report if r["lead_index"] == lead["lead_index"])]
+
+        if not validated_leads:
+            return {"status": "error", "message": "Deep validation failed"}
+
+        # Step 5: Encrypt the validated leads before returning
+        validated_data = {"leads": validated_leads}
+        encrypted_response = encrypt_data(json.dumps(validated_data))
+
+        return {"validated_leads": encrypted_response}
+
 if __name__ == "__main__":
-    from neurons.contributor import submit_lead_list
-    leads = [{"email": "user@example.com", "industry": "SaaS"}]
-    metadata = {"region": "US"}
-    submit_lead_list(leads, metadata)  # Run this first, then imagine getting the encrypted data back
+    validator = LeadPoetValidator()
+    print("Validator running...")
+    while True:
+        pass  # Keep the validator running
