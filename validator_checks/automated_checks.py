@@ -9,7 +9,7 @@ from urllib.parse import urlparse
 HUNTER_API_KEY = "YOUR_HUNTER_API_KEY"  # Same key as in get_leads.py
 
 def verify_email(email):
-    """Verify if an email exists using Hunter.io Email Verifier API."""
+    #Verify if an email exists using Hunter.io Email Verifier API.
     url = f"https://api.hunter.io/v2/email-verifier?email={email}&api_key={HUNTER_API_KEY}"
     try:
         response = requests.get(url, timeout=10)
