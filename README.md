@@ -1,28 +1,11 @@
 # LeadPoet | Bittensor-Powered Lead Gen
 
-## Value Proposition
-LeadPoet delivers free, high-quality leads through Bittensor’s decentralized network, revolutionizing lead generation for agencies and companies. Traditional lead gen struggles with rising costs, inconsistent third-party providers, and strict privacy laws like CCPA and GDPR, slowing growth and reliability.
-
-By harnessing Bittensor’s incentive-driven ecosystem, LeadPoet offers real-time, tailored lead lists from a global contributor base—slashing costs and ensuring compliance through transparent governance. Agencies gain cost-effective, compliant solutions for clients, while companies in SaaS, e-commerce, and beyond access accurate, affordable leads to fuel growth.
-
-**Market:** The $8.5B lead generation software market (5.4% CAGR) is ripe for disruption.
-
-**Traction:** We’re testing demand on X, Discord, and events like Endgame, pitching accelerators and Bittensor contributors. A landing page with early access perks (e.g., free leads) tracks sign-ups.
-
-**Team:** Founders Gavin (Nasdaq Equity PM) and Pranav (Nasdaq Options Specialist) bring deep expertise in high-stakes products for millions.
-
-**Next Steps:** Seeking accelerators for mentorship, a pilot with 3-5 portfolio companies to test free leads, and advisory support for strategy and compliance.
-
-**Contact:** [hello@leadpoet.com](mailto:hello@leadpoet.com) | [leadpoet.com](https://leadpoet.com)
-
----
-
 # LeadPoet Subnet - Decentralized Lead Generation on Bittensor
 
 Welcome to LeadPoet, a Bittensor subnet designed to create a decentralized, privacy-compliant lead generation network. Contributors submit lead lists, validators ensure quality, and buyers access tailored leads via API or UI—all powered by the TAO token ecosystem.
 
 ## Overview
-LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-chain storage to deliver a scalable, incentivized lead marketplace. Contributors earn TAO rewards for high-quality submissions, validators maintain integrity, and buyers access leads for sales and marketing.
+LeadPoet leverages Bittensor’s decentralized architecture to deliver a scalable, incentivized lead marketplace. Contributors earn TAO rewards for high-quality submissions, validators maintain integrity, and buyers access leads for sales and marketing.
 
 **Nodes:** Contributors (submit leads), Validators (assess quality), Buyers (purchase leads).
 
@@ -36,19 +19,13 @@ LeadPoet leverages Bittensor’s decentralized architecture and IPFS for off-cha
 
 ### Prerequisites
 - **Hardware:** 16GB RAM, 4-core CPU, 100GB SSD.
-- **Software:** Bittensor CLI, Python 3.9+, IPFS client.
+- **Software:** Bittensor CLI, Python 3.9+.
 - **TAO Wallet:** Required for staking and transactions.
 
 ### Installation
 #### Install Bittensor:
 ```bash
 pip install bittensor
-```
-
-#### Set up IPFS:
-```bash
-ipfs init
-ipfs daemon
 ```
 
 #### Clone this repo:
@@ -144,13 +121,8 @@ curl -X GET "http://subnet-api/leads?industry=SaaS&region=US" -H "Authorization:
 
 ---
 
-## Contributing
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for details on submitting code, running nodes, and earning rewards.
-
----
-
 ## Support
-- **Email:** [support@subnet.bittensor](mailto:support@subnet.bittensor).
+- **Email:** [support@leadpoet.com](mailto:support@leadpoet.com).
 - **Issues:** File a GitHub issue [here](https://github.com/[your-repo]/issues).
 
 ---
