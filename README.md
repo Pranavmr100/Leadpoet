@@ -1,7 +1,5 @@
 # LeadPoet | Bittensor-Powered Lead Gen
 
-# LeadPoet Subnet - Decentralized Lead Generation on Bittensor
-
 Welcome to LeadPoet, a Bittensor subnet designed to create a decentralized, privacy-compliant lead generation network. Contributors submit lead lists, validators ensure quality, and buyers access tailored leads via API or UI—all powered by the TAO token ecosystem.
 
 ## Overview
